@@ -1,7 +1,7 @@
 {
-  "name": "@artemkv/statuscodes",
-  "version": "1.0.2",
-  "description": "HTTP Status Codes",
+  "name": "@artemkv/statusmessages",
+  "version": "1.0.0",
+  "description": "HTTP Status Messages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

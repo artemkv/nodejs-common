@@ -2,9 +2,7 @@
 =======
 
 ```js
-var statusCodes = require('./statuscodes');
+var statusCodes = require('@artemkv/statuscodes');
 
-var catchAll = function (err, req, res, next) {
-    var statusCode = err.statusCode ? err.statusCode : statusCodes.InternalServerError;
-}
+throw new RestError(statusCodes.MethodNotAllowed, statusMessages.MethodNotAllowed);
 ```

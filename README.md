@@ -3,6 +3,7 @@ NodeJS Common Modules
 To publish:
 
 ```
+npm config set registry https://registry.npmjs.org/
 npm login
 npm whoami
 npm publish --access public
