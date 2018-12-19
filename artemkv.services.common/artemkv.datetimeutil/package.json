@@ -1,0 +1,11 @@
+{
+  "name": "@artemkv/datetimeutil",
+  "version": "1.0.0",
+  "description": "Utilities for working with date and time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Kondratyev",
+  "license": "ISC"
+}
