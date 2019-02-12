@@ -1,6 +1,7 @@
 "use strict";
 
 const url = require('url');
+const uuid = require('uuid/v4');
 
 const myRequest = function (req, res, next) {
     req.my = {};
