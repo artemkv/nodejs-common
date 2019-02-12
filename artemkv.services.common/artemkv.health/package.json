@@ -1,0 +1,14 @@
+{
+  "name": "@artemkv/health",
+  "version": "1.0.0",
+  "description": "REST Health Endpoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Kondratyev",
+  "dependencies": {
+    "@artemkv/statuscodes": "1.0.2"
+  },
+  "license": "ISC"
+}
