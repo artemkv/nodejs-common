@@ -4,7 +4,7 @@ const fs = require('fs');
 const dateTimeUtil = require('@artemkv/datetimeutil');
 
 // This is to cache logging data before it is flushed
-let _logDir = `${__dirname}/log`;
+let _logDir;
 const ROWS_TO_FLASH = 30;
 let _requests = [];
 
@@ -69,7 +69,12 @@ const logSession = function (url) {
     }
 }
 
-const initialize = function () {
+const initialize = function (logDir) {
+    if (!logDir) {
+        throw new Error('logDir must be specified');
+    }
+    _logDir = logDir;
+
     if (!fs.existsSync(_logDir)) {
         fs.mkdirSync(_logDir);
     }

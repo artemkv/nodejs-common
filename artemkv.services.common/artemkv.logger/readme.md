@@ -30,7 +30,7 @@ server.listen(port, ip, function () {
     console.log('Application started');
     console.log('http://' + ip + ":" + port + '/');
     
-    logger.initialize();
+    logger.initialize(`${__dirname}/log`);
     logger.log('Application started: http://' + ip + ":" + port + '/');
 });
 ```
