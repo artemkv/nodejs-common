@@ -1,7 +1,6 @@
 "use strict";
 
 const url = require('url');
-const querystring = require('querystring');
 
 const myRequest = function (req, res, next) {
     req.my = {};
@@ -13,6 +12,9 @@ const myRequest = function (req, res, next) {
 
     var ip = req.headers['x-forwarded-for'] || req.connection ? req.connection.remoteAddress : null;
     req.my.ip = ip;
+
+    req.my.requestId = uuid();
+    req.my.requestTime = new Date();
     
     return next();
 }
