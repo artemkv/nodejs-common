@@ -37,6 +37,8 @@ const logFailedRequest = function (req, res, err) {
 
     let logLine = requestTime + ' ' + requestId + ' ' + err.statusCode + ' ' + err.statusMessage +
         ' ' + err.stack + '\n';
+
+    console.log(logLine);
     fs.appendFile(fileName, logLine, function (err) {
         if (err) {
             console.log(err);
