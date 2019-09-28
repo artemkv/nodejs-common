@@ -1,6 +1,6 @@
 {
   "name": "@artemkv/health",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "REST Health Endpoint",
   "main": "index.js",
   "scripts": {
