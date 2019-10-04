@@ -1,0 +1,12 @@
+{
+  "name": "@artemkv/consolelogger",
+  "version": "1.0.1",
+  "description": "Console Logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Kondratyev",
+  "dependencies": {},
+  "license": "ISC"
+}
