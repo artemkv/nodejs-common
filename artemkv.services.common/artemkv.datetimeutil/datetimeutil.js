@@ -1,11 +1,11 @@
 "use strict";
 
-function getYear(date) {
-    return date.getFullYear();
+function getYearString(date) {
+    return date.getUTCFullYear().toString();
 }
 
-function getMonth(date) {
-    let month = date.getMonth() + 1;
+function getMonthString(date) {
+    let month = date.getUTCMonth() + 1;
     if (month < 10) {
         month = '0' + month.toString();
     } else {
@@ -14,8 +14,8 @@ function getMonth(date) {
     return month;
 }
 
-function getDay(date) {
-    let day = date.getDate();
+function getDayString(date) {
+    let day = date.getUTCDate();
     if (day < 10) {
         day = '0' + day.toString();
     } else {
@@ -24,9 +24,19 @@ function getDay(date) {
     return day;
 }
 
+function getHoursString(date) {
+    let hours = date.getUTCHours();
+    if (hours < 10) {
+        hours = '0' + hours.toString();
+    } else {
+        hours = hours.toString();
+    }
+    return hours;
+}
+
 const getSortableDate = function () {
     let now = new Date();
-    return getYear(now) + getMonth(now) + getDay(now);
+    return getYearString(now) + getMonthString(now) + getDayString(now);
 }
 
 const getTimeStamp = function () {
@@ -38,11 +48,16 @@ const getTimeStamp = function () {
         }
     }
     let now = new Date();
-    let hours = pad(now.getHours());
-    let minutes = pad(now.getMinutes());
-    let seconds = pad(now.getSeconds());
+    let hours = pad(now.getUTCHours());
+    let minutes = pad(now.getUTCMinutes());
+    let seconds = pad(now.getUTCSeconds());
     return `${hours}:${minutes}:${seconds}`;
 }
+
+exports.getYearString = getYearString;
+exports.getMonthString = getMonthString;
+exports.getDayString = getDayString;
+exports.getHoursString = getHoursString;
 
 exports.getSortableDate = getSortableDate;
 exports.getTimeStamp = getTimeStamp;
