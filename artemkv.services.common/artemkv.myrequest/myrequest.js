@@ -1,7 +1,7 @@
 "use strict";
 
 const url = require('url');
-const uuid = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 const myRequest = function (req, res, next) {
     req.my = {};
@@ -14,9 +14,9 @@ const myRequest = function (req, res, next) {
     var ip = req.headers['x-forwarded-for'] || req.connection ? req.connection.remoteAddress : null;
     req.my.ip = ip;
 
-    req.my.requestId = uuid();
+    req.my.requestId = uuidv4();
     req.my.requestTime = new Date();
-    
+
     return next();
 }
 
